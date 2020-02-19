@@ -1,0 +1,130 @@
+[
+{
+  "model": "chapters.label",
+  "pk": 1,
+  "fields": {
+    "label": "mobile"
+  }
+},
+{
+  "model": "chapters.label",
+  "pk": 2,
+  "fields": {
+    "label": "webdev"
+  }
+},
+{
+  "model": "chapters.label",
+  "pk": 3,
+  "fields": {
+    "label": "devops"
+  }
+},
+{
+  "model": "chapters.label",
+  "pk": 4,
+  "fields": {
+    "label": "design"
+  }
+},
+{
+  "model": "chapters.label",
+  "pk": 5,
+  "fields": {
+    "label": "backend"
+  }
+},
+{
+  "model": "chapters.chapter",
+  "pk": 1,
+  "fields": {
+    "name": "Homepage",
+    "labels": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "chapters.chapter",
+  "pk": 2,
+  "fields": {
+    "name": "Home Mobile",
+    "labels": [
+      1,
+      4
+    ]
+  }
+},
+{
+  "model": "chapters.chapter",
+  "pk": 3,
+  "fields": {
+    "name": "Profile Data",
+    "labels": [
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "chapters.chapter",
+  "pk": 4,
+  "fields": {
+    "name": "Notifications",
+    "labels": [
+      1,
+      3,
+      5
+    ]
+  }
+},
+{
+  "model": "chapters.task",
+  "pk": 1,
+  "fields": {
+    "text": "Change Title",
+    "chapter": 1
+  }
+},
+{
+  "model": "chapters.task",
+  "pk": 2,
+  "fields": {
+    "text": "Add Flex Footer",
+    "chapter": 2
+  }
+},
+{
+  "model": "chapters.task",
+  "pk": 3,
+  "fields": {
+    "text": "Change Background",
+    "chapter": 1
+  }
+},
+{
+  "model": "chapters.task",
+  "pk": 4,
+  "fields": {
+    "text": "Auth not working",
+    "chapter": 3
+  }
+},
+{
+  "model": "chapters.task",
+  "pk": 5,
+  "fields": {
+    "text": "Users can follow themselves",
+    "chapter": 3
+  }
+},
+{
+  "model": "chapters.task",
+  "pk": 6,
+  "fields": {
+    "text": "Not working on iOS",
+    "chapter": 4
+  }
+}
+]
