@@ -13,7 +13,7 @@ class Plant(models.Model):
     user = models.ForeignKey(User, related_name='plants', on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.nickname}'
+        return self.nickname
 
 
 # add related models later when testing is done

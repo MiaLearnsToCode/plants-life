@@ -2,7 +2,7 @@
 
 from rest_framework.views import APIView # get the APIView class from DRF
 from rest_framework.response import Response # get the Response class from DRF
-from rest_framework.status import HTTP_201_CREATED, HTTP_422_UNPROCESSABLE_ENTITY, HTTP_204_NO_CONTENT, HTTP_401_UNAUTHORIZED
+from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED, HTTP_422_UNPROCESSABLE_ENTITY, HTTP_204_NO_CONTENT, HTTP_401_UNAUTHORIZED
 from jwt_auth.authentication import JWTAuthentication
 from .models import Plant, Image
 from .serializers import PlantsSerializer, ImagesSerializer, PopulatedPlantSerializer
@@ -18,7 +18,7 @@ class PlantsListView(APIView): # extend the APIView
         plants = Plant.objects.all().filter(user=user)
         serializer = PlantsSerializer(plants, many=True)
 
-        return Response(serializer.data) # send the JSON to the client
+        return Response(serializer.data, status=HTTP_200_OK) # send the JSON to the client
 
     def post(self, request):
         request.data['user'] = request.user.id
@@ -40,7 +40,7 @@ class PlantDetailView(APIView): # extend the APIView
             return Response(status=HTTP_401_UNAUTHORIZED)
         serializer = PopulatedPlantSerializer(plant)
 
-        return Response(serializer.data) # send the JSON to the client
+        return Response(serializer.data, status=HTTP_200_OK) # send the JSON to the client
 
     def put(self, request, pk):
         user = JWTAuthentication.get_user(self, request)
