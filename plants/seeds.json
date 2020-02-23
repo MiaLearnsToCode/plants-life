@@ -1,0 +1,71 @@
+[
+{
+  "model": "plants.plant",
+  "pk": 1,
+  "fields": {
+    "nickname": "Peperomia",
+    "species": "Peperomia Ecuador",
+    "growing_season": "Spring",
+    "ideal_temp": 20,
+    "ideal_hum": 50,
+    "water_frequency": 14,
+    "last_watered": "2020-02-23",
+    "user": 2
+  }
+},
+{
+  "model": "plants.plant",
+  "pk": 2,
+  "fields": {
+    "nickname": "Chunky fern",
+    "species": "Asparagus Fern",
+    "growing_season": "Summer",
+    "ideal_temp": 18,
+    "ideal_hum": 60,
+    "water_frequency": 5,
+    "last_watered": "2020-02-23",
+    "user": 2
+  }
+},
+{
+  "model": "plants.plant",
+  "pk": 3,
+  "fields": {
+    "nickname": "Aloe",
+    "species": "Aloe vera",
+    "growing_season": "Summer",
+    "ideal_temp": 25,
+    "ideal_hum": 10,
+    "water_frequency": 21,
+    "last_watered": "2020-02-23",
+    "user": 2
+  }
+},
+{
+  "model": "plants.image",
+  "pk": 1,
+  "fields": {
+    "image_url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIWFhUWFRUYFhgWFx4YGhgYGxcYFhkWHhgZHCggGRolGxcXIzEhJSkrLjIuGCAzODYtNygtLisBCgoKDg0OGhAQGjUlICUtLS0tLS0rLy0tLS0tLS0tLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOMA3gMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABAUCAwYHAQj/xAA+EAACAQMDAgQDBAgGAgIDAAABAhEAAyEEEjEFQRMiUWEGcYEyQpGhByNSYrHR4fAUM3KCwfFDkqKyFRZT/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAIBAwT/xAAjEQEBAAICAgEEAwAAAAAAAAAAAQIRIUESMQMiUWGhEzJC/9oADAMBAAIRAxEAPwD3GlKUClKUClKUClKUClKUClKUClKUClatRdCiSQP9RgfjUTS9WsuSouW9wJEBweP41lsFhSqx+olzGnUXPVtwCDnuDJM+gNakTWmdzWRM4AY7eYg9z86m58+hcUqh/wATrLRhrS3QRyrRB/8ASpGn6o5+3ZKfMk/wSp/lx74FtSoA6rb4Jg+hx/8AaJqQmrQ8Ov4irmUvY30rSdUnG4T6AyfwGa3Cq2FKUoFKUoFKUoFKUoFKUoFKUoFKUoFK+GoN3RlvM7sRzsGB8vLk1Nt6gnTUfVXWA8sbowCCZ+gNUeq0SngC3mJVHYk9uFA9fUZqCnT9TcZrYvwVkyQygz+yvIHY9q5ZZ59T9sqT1HqeqVGa5Yt7cgGZI/2g59IGfnUHUG/qdovJbtpBhRDNxztUkz7R696m6TTax8FkK23wOxZO4xkA+v3l9gavdKl8CXZT7T/JaiY3L3s05ez8PXAVaC0RkOVb6ziuj0vT4AK3rojEFpEj2YVZCkV0w+GY+jSOtq5//",
+    "posted_on": "2020-02-23",
+    "plant": 2
+  }
+},
+{
+  "model": "plants.image",
+  "pk": 2,
+  "fields": {
+    "image_url": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSEhUUExMWFhUXGBgaGRgYGBkbGhgbGx8fGhgaISAeHigiHxolHyAaIjEjJSkrLi4uGx8zODMtNyotLysBCgoKDg0OGxAQGy0lICUtLS8tLy0vLS0tLS8tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMMBAgMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQADBgIBBwj/xABFEAABAgUCBAQDBgMGAwgDAAABAhEAAxIhMQRBBVFhcQYTIoEykaFCUrHB0fAU4fEWIzNicpIHFaIkNFNUgrLC0hdDg//EABoBAAMBAQEBAAAAAAAAAAAAAAABAgMEBQb/xAArEQACAgIBAwMEAQUBAAAAAAAAAQIRAyESMUFRBBORIjJhcUKBobHR8CP/2gAMAwEAAhEDEQA/AGfiXjmrlaueE6maEBZCUAgJAYWx3MKZ/i3WOG1M0dHF+9ngTxxNmDiOoZBKazcnJswF4Tr1QSoJUQkqDgdvwEeHleTm3yffucsm7HK/GutSWOpmv0Nvwjj+3OudvOmv1P8AKFhm0qpSOrs/yhTxDic9E0JJZNQJAAwepgxucnV/3Yrka/8AtVxJTNqFJG7kAt7j8YrmeMp6Gq4jNPOlj7PyfeMzxY+gEm+14SaSXkqwPqY0xcpRtyZSs3v9tdYpf93qp1P+cpc8zbaLdN4s105K0p1i0qIFKqhYi7YPxCzRjuCzyqYt9k/jCfSo1CVky0TQH+yFMY2jGVv6qryzRRY//wDyNxeWqlepmOWNKmBD4uGMaeXx/iNAUdbqUlSXLlCkow9wkEnox3zGaRw9HnDUTXAWAqgpWVBW4wwD4cw11mrqRWJaigM5pNIfAJ2hZvUTtKH9TWMeQ4meNdWEkI1E2YpORUHfkep6AwDpPHPFCT5i1",
+    "posted_on": "2020-02-23",
+    "plant": 2
+  }
+},
+{
+  "model": "plants.image",
+  "pk": 3,
+  "fields": {
+    "image_url": "http://t0.gstatic.com/images?q=tbn%3AANd9GcQ_P--kMaSgh60gbtJt1y7f9A3GsP2NTTVDh-TvoOCp0NjEdwYHItIRxlMU3BgTR_Xp2uGCKx9e&usqp=CAc",
+    "posted_on": "2020-02-23",
+    "plant": 1
+  }
+}
+]

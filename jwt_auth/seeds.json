@@ -1,0 +1,47 @@
+[
+{
+  "model": "jwt_auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$180000$WdWWhEpS9UYg$1aUN812vrMwrCz097vezjoFNvbJIWJ0HPDXoK1CkrT4=",
+    "last_login": "2020-02-23T15:01:50.180Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-02-23T15:01:31.480Z",
+    "username": "admin",
+    "email": "admin@email.com",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "jwt_auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pass",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-02-23T15:02:03Z",
+    "username": "mia",
+    "email": "mia@email.com",
+    "groups": [],
+    "user_permissions": [
+      29,
+      30,
+      31,
+      32,
+      25,
+      26,
+      27,
+      28
+    ]
+  }
+}
+]
