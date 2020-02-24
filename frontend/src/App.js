@@ -1,18 +1,33 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import 'bulma'
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Error from './components/pages/error/Error'
+import Home from './components/pages/homepage/Home'
 
-import Book from "./components/Plants"
+import Navbar from './components/reusable/common/Navbar'
+import Footer from './components/reusable/common/Footer'
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Route path="/" exact component={Book} />
-      </Router>
-    );
-  }
+import GlobalStyle from './components/styled/GlobalStyle';
+import Wrapper from './components/styled/Wrapper';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <GlobalStyle />
+      <Wrapper>
+        <Navbar />
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path='/*' component={Error} />
+          </Switch>
+        </main>
+        <Footer />
+      </Wrapper>
+      
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
