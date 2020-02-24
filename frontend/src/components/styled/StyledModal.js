@@ -22,6 +22,10 @@ const StyledModal = styled.div`
     font-size: 22px;
     border: 2px solid black;
   }
+
+  small {
+    color: red;
+  }
 `;
 
 export default StyledModal;

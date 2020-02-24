@@ -2,7 +2,7 @@ import React from 'react';
 import StyledButton from './../../styled/StyledButton'
 import StyledModal from './../../styled/StyledModal'
 
-const ModalForm = ({name, fields, handleChange, handleSubmit, onClose}) => {
+const ModalForm = ({error, name, fields, handleChange, handleSubmit, onClose}) => {
   return (
     <StyledModal className="modal is-active">
       <div className="modal-background"></div>
@@ -30,7 +30,7 @@ const ModalForm = ({name, fields, handleChange, handleSubmit, onClose}) => {
                     
                 })
               }
-            
+          <small>{error}</small>
           </section>
           <footer className="modal-card-foot">
             <StyledButton type="submit">Submit</StyledButton>
