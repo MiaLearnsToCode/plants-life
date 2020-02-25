@@ -20,6 +20,12 @@ class PlantsSerializer(serializers.ModelSerializer):
         extra_kwargs = {'images': {'required': False},}
 
 
+class SimplifiedPlantsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Plant
+        fields = ('id', 'nickname', 'last_watered', 'water_frequency', 'images')
+
+
 class ImagesSerializer(serializers.ModelSerializer):
 
     class Meta:

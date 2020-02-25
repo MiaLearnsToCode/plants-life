@@ -5,7 +5,7 @@ from rest_framework.response import Response # get the Response class from DRF
 from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED, HTTP_422_UNPROCESSABLE_ENTITY, HTTP_204_NO_CONTENT, HTTP_401_UNAUTHORIZED
 from jwt_auth.authentication import JWTAuthentication
 from .models import Plant, Image
-from .serializers import PlantsSerializer, ImagesSerializer, PopulatedPlantSerializer
+from .serializers import SimplifiedPlantsSerializer, PlantsSerializer, ImagesSerializer, PopulatedPlantSerializer
 
 
 # Create your views here.
@@ -16,8 +16,7 @@ class PlantsListView(APIView): # extend the APIView
         user = JWTAuthentication.get_user(self, _request)
         # only get the plants that belong to the user who is signed in
         plants = Plant.objects.all().filter(user=user)
-        serializer = PlantsSerializer(plants, many=True)
-
+        serializer = SimplifiedPlantsSerializer(plants, many=True)
         return Response(serializer.data, status=HTTP_200_OK) # send the JSON to the client
 
     def post(self, request):
@@ -59,7 +58,6 @@ class PlantDetailView(APIView): # extend the APIView
         plant = Plant.objects.get(pk=pk)
 
         if plant.user.id != user:
-            print(plant.user.id, user)
             return Response(status=HTTP_401_UNAUTHORIZED)
         plant.delete()
         return Response(status=HTTP_204_NO_CONTENT)

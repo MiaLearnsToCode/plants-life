@@ -4,12 +4,13 @@ import 'bulma'
 
 import Error from './components/pages/error/Error'
 import Home from './components/pages/homepage/Home'
+import Index from './components/pages/index/Index'
 
 import Navbar from './components/reusable/common/Navbar'
 import Footer from './components/reusable/common/Footer'
 
-import GlobalStyle from './components/styled/GlobalStyle';
-import Wrapper from './components/styled/Wrapper';
+import GlobalStyle from './components/styled/GlobalStyle'
+import Wrapper from './components/styled/Wrapper'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Navbar />
         <main>
           <Switch>
+            <Route path="/plants" component={Index} />
             <Route exact path="/" component={Home} />
             <Route path='/*' component={Error} />
           </Switch>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import StyledButton from './../../styled/StyledButton'
 import StyledModal from './../../styled/StyledModal'
 

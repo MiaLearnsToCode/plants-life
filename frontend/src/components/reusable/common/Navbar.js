@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+import { post } from 'axios'
 import { withRouter } from 'react-router-dom'
 import StyledNav from './../../styled/StyledNav'
 import StyledButton from '../../styled/StyledButton'
@@ -33,14 +33,13 @@ class Navbar extends React.Component {
     e.preventDefault()
     const url = `/api/${name.toLowerCase()}`
     try {
-      const { data } = await axios.post(url, this.state.data, headers)
+      const { data } = await post(url, this.state.data, headers)
       if (name === 'Login') setToken(data.token)
       this.toggleModal({ target: { value:'' } })
-      
+      if (name === 'Login') this.navigate('/plants')
     } catch(err) {
       this.setState({ error: 'Invalid Crendentials' })
     }
-    if (name === 'Login') this.navigate('/plants')
   }
 
   handleChange = ({ target: { name, value } }) => {
@@ -94,7 +93,6 @@ class Navbar extends React.Component {
       </>
     )
   }
-  
 }
 
 export default withRouter(Navbar)

@@ -3,7 +3,9 @@ import Container from './../../styled/Container'
 
 const Error = () => {
   return (
-    <Container>Error</Container>
+    <Container>
+      <h1>Ooops..something went wrong</h1>
+    </Container>
   )
 }
 
